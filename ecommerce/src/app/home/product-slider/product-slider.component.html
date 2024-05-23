@@ -1,0 +1,16 @@
+<div class="p-5 lg:px-20 lg:py-10">
+    
+    <p class="title">{{title}}</p>
+
+    <div class="flex justify-center">
+        <div class="container">
+            <div class="row">
+                    <div class="col p-3" *ngFor="let item of product">
+                        <div class="">
+                            <app-product-card class="flex-row" [product]="item"></app-product-card>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

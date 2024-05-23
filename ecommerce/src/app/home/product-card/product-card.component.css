@@ -1,0 +1,23 @@
+.box1 {
+    width: 15rem; /* Fixed width for all boxes */
+}
+
+.card {
+    width: 100%;
+    height: 335px; /* Fixed height for all cards */
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(25, 25, 25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.card-img {
+    width: 100%;
+    height: 200px; /* Fixed height for the image */
+    object-fit: cover; /* Maintain aspect ratio and cover entire space */
+    /* border-top-left-radius: 30px; */
+    /* border-top-right-radius: 30px; */
+}

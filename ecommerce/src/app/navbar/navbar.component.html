@@ -1,0 +1,48 @@
+<div class="fixed top-0 z-50 right-0 left-0 bg-slate-400 text-gray-800">
+    <div class="h-16 flex items-center justify-between px-5">
+
+        <div class="flex items-center">
+            <div class="mr-5">
+                <img class="w-12 h-12" src="assets\images\logo.png" alt="AttireApex">
+            </div>
+
+            <div>
+                <div class="flex space-x-4">
+                    <div>
+                        <button routerLink="/" color="text-gray-800" mat-button>AttireApex</button>
+                    </div>
+                    <div>
+                        <button class="open-button" (click)="openNavbarContent('men')" color="accent"
+                            mat-raised-button>Men</button>
+                    </div>
+                    <div>
+                        <button class="open-button" (click)="openNavbarContent('women')" color="accent"
+                            mat-raised-button>Women</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-3">
+            <button mat-mini-fab routerLink="/cart" color="accent"
+                aria-label="Example icon button with a menu icon">
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+            <button *ngIf="!checkLogin()" routerLink="/login" mat-stroked-button>LOGIN</button>
+            <button mat-mini-fab color="accent" [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button routerLink="/order" mat-menu-item>Order</button>
+                <button routerLink="/cart" mat-menu-item>Cart</button>
+                <button *ngIf="checkLogin()" (click)="logOut()" mat-menu-item>Logout</button>
+            </mat-menu>
+
+
+        </div>
+
+    </div>
+    <div *ngIf="isNavbarOpen" class="modal-container left-0 right-0 absolute">
+        <app-nav-content [selectedSection]="currentSection"></app-nav-content>
+    </div>
+</div>

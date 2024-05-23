@@ -1,0 +1,95 @@
+<div class="col-span-1 lg:col-span-7">
+    <div class="rounded-md shadow-md p-5 box">
+        <form [formGroup]="productForm" (ngSubmit)="addProcuct()">
+            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <div class="col-span-2">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>Image URL</mat-label>
+                        <input matInput formControlName="imageUrl" placeholder="Image URL" autocomplete="off" type="text">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>Brand Name</mat-label>
+                        <input matInput formControlName="brand" placeholder="Brand Name" autocomplete="off" type="text">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>Title</mat-label>
+                        <input matInput formControlName="title" placeholder="Title" autocomplete="off" type="text">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>Color</mat-label>
+                        <input matInput formControlName="color" placeholder="Color" autocomplete="off" type="text">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>Quantity</mat-label>
+                        <input matInput formControlName="quantity" placeholder="Quantity" autocomplete="off" type="number">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>Price</mat-label>
+                        <input matInput formControlName="price" placeholder="price" autocomplete="off" type="number">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>Discounted Price</mat-label>
+                        <input matInput formControlName="discountedPrice" placeholder="Discounted Price" autocomplete="off" type="number">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>Discount Persent</mat-label>
+                        <input matInput formControlName="discountPersent" placeholder="Discount Persent" autocomplete="off" type="number">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>TopLevel Category</mat-label>
+                        <input matInput formControlName="topLevelCategory" placeholder="topLevel Category" autocomplete="off" type="text">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>secondLevel Category</mat-label>
+                        <input matInput formControlName="secondLevelCategory" placeholder="secondLevel Category" autocomplete="off" type="text">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>thirdLavel Category</mat-label>
+                        <input matInput formControlName="thirdLevelCategory" placeholder="thirdLavelCategory" autocomplete="off" type="text">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-span-2">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>Description</mat-label>
+                        <input matInput formControlName="description" placeholder="description" autocomplete="off" type="text">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-span-2">
+                    <button class="w-full" style="padding: 1.6rem" color="accent" type="submit" mat-raised-button>Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

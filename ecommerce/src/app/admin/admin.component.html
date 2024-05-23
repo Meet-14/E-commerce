@@ -1,0 +1,21 @@
+<div class="flex items-start pt-11">
+
+    <div class="w-[20%] border-r border-r-gray-400">
+        <div class="p-3 items-center justify-between">
+            <button mat-flat-button routerLink="/admin" class="w-[90%]">Deshbord</button>
+        </div>
+        <div class="p-3 items-center justify-between">
+            <button mat-flat-button routerLink="/admin/addProduct" class="w-[90%]">Create Products</button>
+        </div>
+        <div class="p-3 items-center justify-between">
+            <button mat-flat-button routerLink="/admin/customer" class="w-[90%]">Customers</button>
+        </div>
+        <div class="p-3 items-center justify-between">
+            <button routerLink="/admin/products" mat-flat-button class="w-[90%]">Products</button>
+        </div>
+    </div>
+
+    <div class="w-[80%]">
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<main class="mt-10">
+    <div class="py-10 lg:grid grid-cols-3 relative lg:px-16">
+        <section class="lg:col-span-2 lg:px-5">
+            <div class="box p-5 space-y-3">
+                <ng-container *ngIf="cart">
+                    <div *ngFor="let item of cartItems; let last=last">
+                        <app-cart-item [cartItem]="item" shoshowButton="true"></app-cart-item>
+                        <mat-divider class="bg-gray-300"></mat-divider>
+                    </div>
+                </ng-container>
+            </div>
+        </section>
+
+        <section class="px-5 sticky top-0 h-[100vh] mt-5 lg:mt-0">
+            <ng-container *ngIf="cart">
+                <div class="box p-5 rounded-sm">
+                    <p class="font-bold pb-3 text-gray-400">PRICE DETAILS</p>
+                    <mat-divider class="bg-gray-300"></mat-divider>
+                    <div class="space-y-3">
+                        <div class="flex justify-between pb-3 pt-2">
+                            <span>Total Price</span>
+                            <span>{{cartData.totalPrice}}</span>
+                        </div>
+                        <div class="flex justify-between pb-3">
+                            <span>Total Discount</span>
+                            <span class="text-green-400">{{cartData.dicount}}</span>
+                        </div>
+                        <div class="flex justify-between pb-2">
+                            <span>Delivery Charge</span>
+                            <span class="text-green-400">Free</span>
+                        </div>
+                        <mat-divider class="bg-gray-300"></mat-divider>
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>Total Amount</span>
+                            <span>${{cartData.totalDiscountedPrice}}</span>
+                        </div>
+                        <button routerLink="/checkout" mat-raised-button class="w-full text-lg mt-8 p-28 px-10" color="accent">CHECKOUT</button>
+                    </div>
+                </div>
+            </ng-container>
+        </section>
+
+    </div>
+</main>

@@ -1,0 +1,59 @@
+<div class="p-5 lg:p-10 mt-10">
+
+    <section class="lg:grid grid-cols-3 lg:gap-10">
+
+        <div class="col-span-2 flex items-center flex-col">
+
+            <img [src]="product.imageUrl" alt="">
+
+        </div>
+
+        <div class="col-span-1 space-y-10 mt-10 lg:mt-0 ">
+
+            <div class="space-y-2">
+
+                <h2 class="font-semibold text-gray-400 text-lg">{{product.brand}}</h2>
+                <p class="text-xl">{{product.title}}</p>
+
+            </div>
+            <div class="flex items-center space-x-5">
+                <p class="text-gray-400 text-lg">Color:{{product.color}}</p>
+
+            </div>
+
+            <div class="flex items-center space-x-5">
+
+                <p class="opacity-30">${{product.price}}</p>
+                <p class="text-lg">${{product.discountedPrice}}</p>
+                <p class="text-green-500">{{product.discountPersent}}% off</p>
+
+            </div>
+
+            <div class="p-2">
+                <p class="font-semibold text-lg">Size</p>
+                <mat-radio-group color="accent" aria-label="Select an option" class="space-x-5"
+                    [(ngModel)]="selectedSize">
+                    <mat-radio-button value="S">
+                        <span class="text-white">S</span>
+                    </mat-radio-button>
+                    <mat-radio-button value="M">
+                        <span class="text-white">M</span>
+                    </mat-radio-button>
+                    <mat-radio-button value="L">
+                        <span class="text-white">L</span>
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+            <div>
+                <button (click)="handalAddToCart()" color="accent" class="w-full" style="padding: 1.5rem;"
+                    mat-raised-button>Add to Cart</button>
+            </div>
+            <div>
+                <p class="text-gray-600">{{product.description}}</p>
+            </div>
+
+        </div>
+
+    </section>
+</div>

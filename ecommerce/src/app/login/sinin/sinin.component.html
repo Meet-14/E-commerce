@@ -1,0 +1,12 @@
+<div class="container" align="center">
+  <div class="heading">Sign In</div>
+  <form [formGroup]="loginForm" class="form text-black" (ngSubmit)="addUser()">
+    <input required firstName class="input" type="text" id="firstName" placeholder="First Name" formControlName="firstName">
+    <input required class="input" type="text" id="lastName" placeholder="Last Name" formControlName="lastName">
+    <input required class="input" type="tel" id="phoneNo" placeholder="Phone Number" formControlName="phoneNo">
+    <input required email class="input" type="email" id="email" placeholder="Email" formControlName="email">
+    <input required class="input" type="password" id="password" placeholder="Password" formControlName="password">
+    <h5 class="text-danger">{{errMsg}}</h5>
+    <input class="login-button" type="submit" value="Sign In">
+  </form>
+</div>
